@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Header from '../Header/Header';
+import Nav from '../Nav/Nav';
+
 import logo from './logo.svg';
 import './App.css';
 
