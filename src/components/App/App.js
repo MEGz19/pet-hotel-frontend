@@ -17,16 +17,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-
-          {/* which header do we want? */}
-          <header>
-            <h1>mix master andy's pet hotel</h1>
-          </header>
           <Header />
-
           <Nav />
-          <Route path="/" component={Dashboard} />
-          <Route path="/manage" component={ManageOwners} />
+          {/* <Route path="/" component={Dashboard} /> */}
+          <Route path="/" component={ManageOwners} />
         </div>
       </Router>
     )

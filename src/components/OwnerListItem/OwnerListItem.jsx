@@ -6,19 +6,19 @@ class OwnerListItem extends Component {
     render() {
         return (
             <div>
-                
+                <li>{this.props.reduxState.getOwnersReducer}</li>
             </div>
         )
     }
 }
 
-// const putStateOnProps = (reduxState) => {
-//     return (
-//         {
-//             reduxState
-//         }
-//     )
-// }
+const putStateOnProps = (reduxState) => {
+    return (
+        {
+            reduxState
+        }
+    )
+}
 
-// export default connect(putStateOnProps)(OwnerListItem);
-export default OwnerListItem;
+export default connect(putStateOnProps)(OwnerListItem);
+// export default OwnerListItem;

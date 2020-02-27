@@ -9,7 +9,6 @@ import getPetsReducer from './getPetsReducer';
 const rootReducer = combineReducers({
     getOwnersReducer,
     getPetsReducer,
-})
-    
+});
 
-
+export default rootReducer;

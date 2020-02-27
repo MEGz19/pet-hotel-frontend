@@ -10,6 +10,10 @@ import PetListItem from '../PetListItem/PetListItem';
 
 class PetList extends Component {
 
+    componentDidMount() {
+        this.props.dispatch({ type: 'GET_PETS' });
+    }
+
     render() {
         return (
             <div>
@@ -24,6 +28,7 @@ class PetList extends Component {
                     </thead>
                     <tbody>
                         {/* <PetListItem /> */}
+                        <p>this is where the pet list will go</p>
                     </tbody>
                 </table>
             </div>
@@ -31,13 +36,13 @@ class PetList extends Component {
     }
 }
 
-// const putStateOnProps = (reduxState) => {
-//     return (
-//         {
-//             reduxState
-//         }
-//     )
-// }
+const putStateOnProps = (reduxState) => {
+    return (
+        {
+            reduxState
+        }
+    )
+}
 
-// export default connect(putStateOnProps)(Dashboard);
-export default PetList;
+export default connect(putStateOnProps)(PetList);
+// export default PetList;
