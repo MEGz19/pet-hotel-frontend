@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import AddPetForm from '../AddPetForm/AddPetForm';
+import PetList from '../PetList/PetList'
 
 class Dashboard extends Component {
 
     render() {
         return (
             <div>
-                {/* add pet form */}
-                {/* pet table */}
+                <AddPetForm />
+                <PetList />
             </div>
         )
     }
