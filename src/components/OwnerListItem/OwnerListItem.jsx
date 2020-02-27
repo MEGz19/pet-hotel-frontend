@@ -21,4 +21,3 @@ const putStateOnProps = (reduxState) => {
 }
 
 export default connect(putStateOnProps)(OwnerListItem);
-// export default OwnerListItem;

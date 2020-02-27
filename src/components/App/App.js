@@ -19,8 +19,8 @@ class App extends Component {
         <div className="App">
           <Header />
           <Nav />
-          {/* <Route path="/" component={Dashboard} /> */}
-          <Route path="/" component={ManageOwners} />
+          <Route path="/" component={Dashboard} />
+          <Route path="/owners" component={ManageOwners} />
         </div>
       </Router>
     )

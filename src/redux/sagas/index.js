@@ -4,7 +4,7 @@ import { all } from 'redux-saga/effects';
 // import deleteOwnerSaga from './deleteOwnerSaga';
 // import deletePetSaga from './deletePetSaga';
 import getOwnersSaga from './getOwnersSaga';
-// import getPetsSaga from './getPetsSaga';
+import getPetsSaga from './getPetsSaga';
 // import petStatusSaga from './petStatusSaga';
 
 export default function* rootSaga() {
@@ -14,7 +14,7 @@ export default function* rootSaga() {
         // deleteOwnerSaga(),
         // deletePetSaga(),
         getOwnersSaga(),
-        // getPetsSaga(),
+        getPetsSaga(),
         // petStatusSaga()
     ]);
 }

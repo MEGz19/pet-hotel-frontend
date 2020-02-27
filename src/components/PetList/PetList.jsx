@@ -27,6 +27,9 @@ class PetList extends Component {
                         <th>actions</th>
                     </thead>
                     <tbody>
+                        {this.props.reduxState.getPetsReducer.map(pet => {
+                            return <PetListItem id="petListItem" key={pet} pet={pet} />
+                        })}
                         {/* <PetListItem /> */}
                         <p>this is where the pet list will go</p>
                     </tbody>
@@ -45,4 +48,3 @@ const putStateOnProps = (reduxState) => {
 }
 
 export default connect(putStateOnProps)(PetList);
-// export default PetList;

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-
 // GET request for Owners
 function* getOwners() {
     console.log('getting all owners from server');
