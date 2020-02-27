@@ -1,30 +1,25 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+class Dashboard extends Component {
 
-class App extends Component {
-
-    componentDidMount() {
-    }
-  
     render() {
-      return (
-        <Router>
-          <div className="App">
-            <Header />
-            <Nav />
-            <Route path="/" component={Dashboard} />
-            <Route path="/manage" component={ManageOwners} />
-          </div>
-        </Router>
-      )
+        return (
+            <div>
+                {/* add pet form */}
+                {/* pet table */}
+            </div>
+        )
     }
-  }
-  
-  const putStateOnProps = (reduxState) => {
+}
+
+const putStateOnProps = (reduxState) => {
     return (
-      {
-        reduxState
-      }
+        {
+            reduxState
+        }
     )
-  }
-  
-  export default connect(putStateOnProps)(App);
+}
+
+// export default connect(putStateOnProps)(Dashboard);
+export default Dashboard;

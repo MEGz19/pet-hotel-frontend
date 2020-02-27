@@ -1,28 +1,9 @@
-class App extends Component {
+import React from 'react';
 
-    componentDidMount() {
-    }
+const Header = () => (
+    <header>
+      <h1>mix master andy's pet hotel</h1>
+    </header>
+  );
   
-    render() {
-      return (
-        <Router>
-          <div className="App">
-            <Header />
-            <Nav />
-            <Route path="/" component={Dashboard} />
-            <Route path="/manage" component={ManageOwners} />
-          </div>
-        </Router>
-      )
-    }
-  }
-  
-  const putStateOnProps = (reduxState) => {
-    return (
-      {
-        reduxState
-      }
-    )
-  }
-  
-  export default connect(putStateOnProps)(App);
+export default Header;
