@@ -30,8 +30,6 @@ class PetList extends Component {
                         {this.props.reduxState.getPetsReducer.map(pet => {
                             return <PetListItem id="petListItem" key={pet} pet={pet} />
                         })}
-                        {/* <PetListItem /> */}
-                        <p>this is where the pet list will go</p>
                     </tbody>
                 </table>
             </div>

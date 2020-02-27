@@ -6,19 +6,22 @@ class PetListItem extends Component {
     render() {
         return (
             <div>
-                
+                <tr>
+                    {this.props.reduxState.getPetsReducer}
+                    JSON.stringify({this.props.reduxState.getPetsReducer})
+                </tr>
             </div>
         )
     }
 }
 
-// const putStateOnProps = (reduxState) => {
-//     return (
-//         {
-//             reduxState
-//         }
-//     )
-// }
+const putStateOnProps = (reduxState) => {
+    return (
+        {
+            reduxState
+        }
+    )
+}
 
-// export default connect(putStateOnProps)(PetListItem);
-export default PetListItem;
+export default connect(putStateOnProps)(PetListItem);
+// export default PetListItem;

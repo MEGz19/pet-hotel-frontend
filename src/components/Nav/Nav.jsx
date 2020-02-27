@@ -4,23 +4,29 @@ import { withRouter } from 'react-router-dom';
 
 class Nav extends Component {
 
+    goOwners = () => {
+        this.props.history.push('/owners')
+    }
+
+    goPets = () => {
+        this.props.history.push('/')
+    }
+
     render() {
         return (
             <div>
-                <button>dashboard</button>
-                <button>manage owners</button>
+                <button onClick={this.goPets}>dashboard</button>
+                <button onClick={this.goOwners}>manage owners</button>
             </div>
         )
     }
 }
 
-export default Nav;
-
-// const putStateOnProps = (reduxState) => {
-//     return {
-//         reduxState
-//     }
-// }
+const putStateOnProps = (reduxState) => {
+    return {
+        reduxState
+    }
+}
 
 // export default connect(putStateOnProps)(Nav);
-// export default withRouter(connect(putStateOnProps)(Nav));
+export default withRouter(connect(putStateOnProps)(Nav));

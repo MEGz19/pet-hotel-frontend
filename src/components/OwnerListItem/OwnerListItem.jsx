@@ -6,7 +6,7 @@ class OwnerListItem extends Component {
     render() {
         return (
             <div>
-                <li>{this.props.reduxState.getOwnersReducer}</li>
+                <tr>{this.props.reduxState.getOwnersReducer}</tr>
             </div>
         )
     }

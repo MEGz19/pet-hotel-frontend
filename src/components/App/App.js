@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
@@ -19,7 +19,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <Nav />
-          <Route path="/" component={Dashboard} />
+          <Route exact path="/" component={Dashboard} />
           <Route path="/owners" component={ManageOwners} />
         </div>
       </Router>
@@ -36,4 +36,4 @@ const putStateOnProps = (reduxState) => {
 }
 
 // export default connect(putStateOnProps)(App);
-export default App;
+export default connect()(App);
