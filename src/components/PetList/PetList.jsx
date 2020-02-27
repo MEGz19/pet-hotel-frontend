@@ -10,25 +10,30 @@ import PetListItem from '../PetListItem/PetListItem';
 
 class PetList extends Component {
 
-    componentDidMount() {
-        this.props.dispatch({ type: 'GET_PETS' });
-    }
+    // componentDidMount() {
+    //     this.props.dispatch({ type: 'GET_PETS' });
+    // }
 
     render() {
         return (
             <div>
                 <table>
                     <thead>
-                        <th>owner</th>
-                        <th>pet</th>
-                        <th>breed</th>
-                        <th>color</th>
-                        <th>checked-in</th>
-                        <th>actions</th>
+                        <tr>
+                            <th>owner</th>
+                            <th>pet</th>
+                            <th>breed</th>
+                            <th>color</th>
+                            <th>checked-in</th>
+                            <th>actions</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {this.props.reduxState.getPetsReducer.map(pet => {
-                            return <PetListItem id="petListItem" key={pet} pet={pet} />
+                            return (
+                                // <h3>yay</h3>
+                            <PetListItem id="petListItem" key={pet} pet={pet} />
+                            )
                         })}
                     </tbody>
                 </table>

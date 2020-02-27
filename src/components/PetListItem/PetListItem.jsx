@@ -7,8 +7,8 @@ class PetListItem extends Component {
         return (
             <div>
                 <tr>
-                    {this.props.reduxState.getPetsReducer}
-                    JSON.stringify({this.props.reduxState.getPetsReducer})
+                    {/* {this.props.reduxState.getPetsReducer} */}
+                    {JSON.stringify(this.props.pet)}
                 </tr>
             </div>
         )

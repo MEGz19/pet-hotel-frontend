@@ -10,7 +10,8 @@ import './App.css';
 class App extends Component {
 
   componentDidMount() {
-    // this should get pets and owners from the database into the reducers
+    this.props.dispatch({ type: 'GET_PETS' });
+    this.props.dispatch({ type: 'GET_OWNERS' });
   }
 
   render() {

@@ -10,18 +10,19 @@ class Dashboard extends Component {
             <div>
                 <AddPetForm />
                 <PetList />
+                <h1>hai</h1>
             </div>
         )
     }
 }
 
-const putStateOnProps = (reduxState) => {
-    return (
-        {
-            reduxState
-        }
-    )
-}
+// const putStateOnProps = (reduxState) => {
+//     return (
+//         {
+//             reduxState
+//         }
+//     )
+// }
 
 // export default connect(putStateOnProps)(Dashboard);
 export default Dashboard;

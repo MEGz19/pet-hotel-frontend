@@ -16,13 +16,15 @@ class OwnerList extends Component {
             <div>
                 <table>
                     <thead>
-                        <th>owner's name</th>
-                        <th>number of pets</th>
-                        <th>actions</th>
+                        <tr>
+                            <th>owner's name</th>
+                            <th>number of pets</th>
+                            <th>actions</th>
+                        </tr>
                     </thead>
-                {this.props.reduxState.getOwnersReducer.map(owner => {
-                    return <OwnerListItem id="ownerListItem" key={owner} owner={owner} />
-                })}
+                    {this.props.reduxState.getOwnersReducer.map(owner => {
+                        return <OwnerListItem id="ownerListItem" key={owner} owner={owner} />
+                    })}
                 </table>
             </div>
         )
