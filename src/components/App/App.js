@@ -3,29 +3,35 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
-
-import logo from './logo.svg';
+import Dashboard from '../Dashboard/Dashboard';
+import ManageOwners from '../ManageOwners/ManageOwners';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  componentDidMount() {
+  }
+
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Header />
+          <Nav />
+          <Route path="/" component={Dashboard} />
+          <Route path="/manage" component={ManageOwners} />
+        </div>
+      </Router>
+    )
+  }
 }
 
-export default App;
+const putStateOnProps = (reduxState) => {
+  return (
+    {
+      reduxState
+    }
+  )
+}
+
+export default connect(putStateOnProps)(App);
