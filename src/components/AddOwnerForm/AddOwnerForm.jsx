@@ -8,7 +8,8 @@ class AddOwnerForm extends Component {
     render() {
         return (
             <div>
-                
+                <input></input>
+                <button></button>
             </div>
         )
     }
