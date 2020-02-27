@@ -11,7 +11,11 @@ class AddPetForm extends Component {
     render() {
         return (
             <div>
-                
+                <input type="text" placeholder="name"/>
+                <input type="text" placeholder="color"/>
+                <input type="text" placeholder="breed"/>
+                <select>owner</select>
+                <button>add pet</button>
             </div>
         )
     }
