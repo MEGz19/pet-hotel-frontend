@@ -1,28 +1,23 @@
-class App extends Component {
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-    componentDidMount() {
-    }
-  
+class ManageOwners extends Component {
+
     render() {
-      return (
-        <Router>
-          <div className="App">
-            <Header />
-            <Nav />
-            <Route path="/" component={Dashboard} />
-            <Route path="/manage" component={ManageOwners} />
-          </div>
-        </Router>
-      )
+        return (
+            <div>
+            </div>
+        )
     }
-  }
-  
-  const putStateOnProps = (reduxState) => {
+}
+
+const putStateOnProps = (reduxState) => {
     return (
-      {
-        reduxState
-      }
+        {
+            reduxState
+        }
     )
-  }
-  
-  export default connect(putStateOnProps)(App);
+}
+
+// export default connect(putStateOnProps)(ManageOwners);
+export default ManageOwners;

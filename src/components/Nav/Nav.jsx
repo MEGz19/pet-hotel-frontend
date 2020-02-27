@@ -1,28 +1,26 @@
-class App extends Component {
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-    componentDidMount() {
-    }
-  
+class Nav extends Component {
+
     render() {
-      return (
-        <Router>
-          <div className="App">
-            <Header />
-            <Nav />
-            <Route path="/" component={Dashboard} />
-            <Route path="/manage" component={ManageOwners} />
-          </div>
-        </Router>
-      )
+        return (
+            <div>
+                <button>dashboard</button>
+                <button>manage owners</button>
+            </div>
+        )
     }
-  }
-  
-  const putStateOnProps = (reduxState) => {
-    return (
-      {
-        reduxState
-      }
-    )
-  }
-  
-  export default connect(putStateOnProps)(App);
+}
+
+export default Nav;
+
+// const putStateOnProps = (reduxState) => {
+//     return {
+//         reduxState
+//     }
+// }
+
+// export default connect(putStateOnProps)(Nav);
+// export default withRouter(connect(putStateOnProps)(Nav));

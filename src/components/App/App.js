@@ -10,13 +10,20 @@ import './App.css';
 class App extends Component {
 
   componentDidMount() {
+    // this should get pets and owners from the database into the reducers
   }
 
   render() {
     return (
       <Router>
         <div className="App">
+
+          {/* which header do we want? */}
+          <header>
+            <h1>mix master andy's pet hotel</h1>
+          </header>
           <Header />
+
           <Nav />
           <Route path="/" component={Dashboard} />
           <Route path="/manage" component={ManageOwners} />
@@ -34,4 +41,5 @@ const putStateOnProps = (reduxState) => {
   )
 }
 
-export default connect(putStateOnProps)(App);
+// export default connect(putStateOnProps)(App);
+export default App;
