@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects';
-// import addOwnerSaga from './addOwnerSaga';
+import addOwnerSaga from './addOwnerSaga';
 // import addPetSaga from './addPetSaga';
 // import deleteOwnerSaga from './deleteOwnerSaga';
 // import deletePetSaga from './deletePetSaga';
@@ -9,7 +9,7 @@ import getPetsSaga from './getPetsSaga';
 
 export default function* rootSaga() {
     yield all([
-        // addOwnerSaga(),
+        addOwnerSaga(),
         // addPetSaga(),
         // deleteOwnerSaga(),
         // deletePetSaga(),
