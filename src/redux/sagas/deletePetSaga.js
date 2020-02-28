@@ -6,7 +6,7 @@ function* deleteSaga() {
 }
 
 function* deletePet(action) {
-    console.log('in delete pet', action.payload);
+    // console.log('in delete pet', action.payload);
     let response = yield axios.delete(`/api/history/${action.payload}`);
     yield put ({ type: 'SET_PET', payload: response.data}); // need index value?
     yield put ({ type: 'GET_PET'});

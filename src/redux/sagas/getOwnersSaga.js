@@ -3,7 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 // GET request for Owners
 function* getOwners() {
-    console.log('getting all owners from server');
+    // console.log('getting all owners from server');
     try {
         let response = yield axios.get('/api/owners');
         //put is the same as dispatch and will go to our reducer

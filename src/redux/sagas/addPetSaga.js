@@ -7,7 +7,7 @@ function* addPetSaga() {
 
 // dispatches a POST for a new submission to the database
 function* submitPet(action) {
-    console.log('in submit pet', action.payload)
+    // console.log('in submit pet', action.payload)
     try {
         yield axios.post(`/api/history`, action.payload);
         yield put({ type: 'GET_PETS' });

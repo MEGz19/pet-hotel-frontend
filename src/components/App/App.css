@@ -47,10 +47,5 @@ table {
 }
 
 td, th {
-  border: 3px solid #dddddd;
   padding: 8px;
 }
-
-/* tr:nth-child(odd) {
-  background-color: #dddddd;
-} */

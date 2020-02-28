@@ -36,7 +36,7 @@ class AddPetForm extends Component {
                 <input type="text" placeholder="name" onChange={(event) => this.makeNewPet(event, 'name')} />
                 <input type="text" placeholder="color" onChange={(event) => this.makeNewPet(event, 'color')} />
                 <input type="text" placeholder="breed" onChange={(event) => this.makeNewPet(event, 'breed')} />
-                <label for="owner"> owner: </label>
+                <label> owner: </label>
                 <select name="owner" id="owner" defaultValue="owner" placeholder="owner" onChange={(event) => this.makeNewPet(event, 'owner')}>owner
                     {this.props.reduxState.getOwnersReducer.map(owner => {
                         return (

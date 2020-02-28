@@ -7,7 +7,7 @@ function* addOwnerSaga() {
 
 // dispatches a POST for a new submission to the database
 function* submitOwner(action) {
-    console.log('in submit owner', action.payload)
+    // console.log('in submit owner', action.payload)
     try {
         yield axios.post(`/api/owners`, action.payload);
         yield put({ type: 'GET_OWNERS' });

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, withRouter } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
@@ -30,13 +30,4 @@ class App extends Component {
   }
 }
 
-const putStateOnProps = (reduxState) => {
-  return (
-    {
-      reduxState
-    }
-  )
-}
-
-// export default connect(putStateOnProps)(App);
 export default connect()(App);
