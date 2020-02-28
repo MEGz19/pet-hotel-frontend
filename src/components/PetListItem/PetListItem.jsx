@@ -3,16 +3,20 @@ import { connect } from 'react-redux';
 
 class PetListItem extends Component {
 
+    deletePet = () => {
+        console.log('trying to delete', this.props.pet.name);
+    }
+
     render() {
         return (
             <div>
-                <tr>
+                <tr id={this.props.pet.id}>
                 <td>{this.props.pet.owner}</td>
-                <td>{this.props.pet.name}</td>
+                <td>{this.props.pet.pet}</td>
                 <td>{this.props.pet.breed}</td>
                 <td>{this.props.pet.color}</td>
                 <td>{this.props.pet.checkedin}</td>
-                <button>delete</button>
+                <button onClick={this.deletePet}>delete</button>
                 </tr>
             </div>
         )

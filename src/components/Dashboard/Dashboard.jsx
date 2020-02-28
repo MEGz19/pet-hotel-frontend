@@ -10,7 +10,7 @@ class Dashboard extends Component {
             <div>
                 <AddPetForm />
                 <PetList />
-                <h1>hai</h1>
+                {/* <h1>hai</h1> */}
             </div>
         )
     }

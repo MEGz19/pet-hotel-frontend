@@ -3,12 +3,16 @@ import { connect } from 'react-redux';
 
 class OwnerListItem extends Component {
 
+    deleteOwner = () => {
+        console.log('trying to delete', this.props.owner.name);
+    }
+
     render() {
         return (
             <div>
-                <tr>
+                <tr id={this.props.owner.id}>
                     <td>{this.props.owner.name}</td>
-                    <button>delete</button>
+                    <button onClick={this.deleteOwner}>delete</button>
                 </tr>
             </div>
         )
