@@ -5,7 +5,12 @@ class PetListItem extends Component {
 
     deletePet = () => {
         console.log('trying to delete', this.props.pet.pet);
+        this.props.dispatch({
+            type: 'DELETE_PET',
+            payload : this.props.pet.id
+        })
     }
+
 
     render() {
         return (

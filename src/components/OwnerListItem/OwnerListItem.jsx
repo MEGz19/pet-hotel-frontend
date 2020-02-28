@@ -5,6 +5,10 @@ class OwnerListItem extends Component {
 
     deleteOwner = () => {
         console.log('trying to delete', this.props.owner.name);
+        this.props.dispatch({
+            type: 'DELETE_OWNER',
+            payload : this.props.owner.id
+        })
     }
 
     render() {

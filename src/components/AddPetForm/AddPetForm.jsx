@@ -8,7 +8,7 @@ class AddPetForm extends Component {
             name: '',
             color: '',
             breed: '',
-            owner: '',
+            owner: '1',
         }
     }
 
