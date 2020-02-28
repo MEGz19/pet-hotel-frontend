@@ -23,7 +23,7 @@ class AddPetForm extends Component {
     };
 
     submitNewPet = () => {
-        console.log('submitting new:', this.state.name);
+        console.log('submitting new:', this.state.newPet);
         this.props.dispatch({
             type: 'SUBMIT_PET',
             payload: this.state.newPet
@@ -37,10 +37,10 @@ class AddPetForm extends Component {
                 <input type="text" placeholder="color" onChange={(event) => this.makeNewPet(event, 'color')} />
                 <input type="text" placeholder="breed" onChange={(event) => this.makeNewPet(event, 'breed')} />
                 <label for="owner"> owner: </label>
-                <select name="owner" id="owner" defaultValue="owner" placeholder="owner">owner
+                <select name="owner" id="owner" defaultValue="owner" placeholder="owner" onChange={(event) => this.makeNewPet(event, 'owner')}>owner
                     {this.props.reduxState.getOwnersReducer.map(owner => {
                         return (
-                            <option value={owner.id} key={owner.id} onChange={(event) => this.makeNewPet(event, 'owner')}>{owner.name}</option>
+                            <option value={owner.id} key={owner.id}>{owner.name}</option>
                         )})}
                 </select>
                 <button onClick={this.submitNewPet}>add pet</button>
