@@ -21,7 +21,7 @@ class PetList extends Component {
                     <thead>
                         <tr>
                             <th>owner</th>
-                            <th>pet</th>
+                            <th>name</th>
                             <th>breed</th>
                             <th>color</th>
                             <th>checked-in</th>
@@ -31,7 +31,6 @@ class PetList extends Component {
                     <tbody>
                         {this.props.reduxState.getPetsReducer.map(pet => {
                             return (
-                                // <h3>yay</h3>
                             <PetListItem id="petListItem" key={pet} pet={pet} />
                             )
                         })}

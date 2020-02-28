@@ -6,7 +6,10 @@ class OwnerListItem extends Component {
     render() {
         return (
             <div>
-                <tr>{this.props.reduxState.getOwnersReducer}</tr>
+                <tr>
+                    <td>{this.props.owner.name}</td>
+                    <button>delete</button>
+                </tr>
             </div>
         )
     }

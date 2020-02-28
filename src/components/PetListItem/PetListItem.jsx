@@ -7,8 +7,12 @@ class PetListItem extends Component {
         return (
             <div>
                 <tr>
-                    {/* {this.props.reduxState.getPetsReducer} */}
-                    {JSON.stringify(this.props.pet)}
+                <td>{this.props.pet.owner}</td>
+                <td>{this.props.pet.name}</td>
+                <td>{this.props.pet.breed}</td>
+                <td>{this.props.pet.color}</td>
+                <td>{this.props.pet.checkedin}</td>
+                <button>delete</button>
                 </tr>
             </div>
         )
