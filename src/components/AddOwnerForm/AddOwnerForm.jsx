@@ -4,26 +4,26 @@ import { connect } from 'react-redux';
 class AddOwnerForm extends Component {
 
     state = {
-        owner: {
+        newOwner: {
             name: ''
         }
     }
 
     makeNewOwner = (event, propertyValue) => {
-        console.log('typing:', this.state.owner);
+        console.log('typing:', this.state.newOwner);
         this.setState({
-            owner: {
-                ...this.state.owner,
+            newOwner: {
+                ...this.state.newOwner,
                 [propertyValue]: event.target.value
             }
         })
     };
 
     submitNewOwner = () => {
-        console.log('submitting new:', this.state.owner);
+        console.log('submitting new owner:', this.state.newOwner);
         this.props.dispatch({
             type: 'SUBMIT_OWNER',
-            payload: this.state.owner
+            payload: this.state.newOwner
         })
     };
 
