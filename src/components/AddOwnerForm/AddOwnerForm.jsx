@@ -32,6 +32,7 @@ class AddOwnerForm extends Component {
             <div>
                 <input type="text" placeholder="name" onChange={(event) => this.makeNewOwner(event, 'name')}></input>
                 <button onClick={this.submitNewOwner}>add owner</button>
+                <br></br>
             </div>
         )
     }

@@ -19,7 +19,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
+          <br></br>
           <Nav />
+          <br></br>
           <Route exact path="/" component={Dashboard} />
           <Route path="/owners" component={ManageOwners} />
         </div>

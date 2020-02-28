@@ -9,12 +9,13 @@ class OwnerListItem extends Component {
 
     render() {
         return (
-            <div>
+            <>
                 <tr id={this.props.owner.id}>
                     <td>{this.props.owner.name}</td>
+                    <td>{this.props.owner.id}</td>
                     <button onClick={this.deleteOwner}>delete</button>
                 </tr>
-            </div>
+            </>
         )
     }
 }
