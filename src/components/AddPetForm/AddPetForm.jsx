@@ -40,10 +40,10 @@ class AddPetForm extends Component {
                 <select name="owner" id="owner" placeholder="owner">owner
                     {this.props.reduxState.getOwnersReducer.map(owner => {
                         return (
-                            <option value={owner.id}>{owner.name}</option>
+                            <option value={owner.id} onChange={(event) => this.makeNewPet(event, 'owner')}>{owner.name}</option>
                         )})}
                 </select>
-                <button onClick = { this.submitNewPet } > add pet</button>
+                <button onClick={this.submitNewPet}>add pet</button>
             </div >
         )
     }
@@ -58,4 +58,3 @@ const putStateOnProps = (reduxState) => {
 }
 
 export default connect(putStateOnProps)(AddPetForm);
-// export default AddPetForm;
